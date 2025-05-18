@@ -4,7 +4,7 @@
 
 **Lê An Bình _ 23133007**
 
-**Lớp Tri tue nhan tao_ Nhom 05 (nhưng chuyển lớp và nộp bài trên Lớp Tri tue nhan tao_ Nhom 04))**
+**Lớp Tri tue nhan tao_ Nhom 05 (nhưng chuyển lớp và nộp bài trên Lớp Tri tue nhan tao_ Nhom 04)**
 
 ---
 
@@ -249,3 +249,27 @@ SARSA là một thuật toán học tăng cường (Reinforcement Learning) theo
 Thuật toán SARSA không tối ưu cho bài toán này là vì không gian trạng thái lớn, tập huấn luyện không hiệu quả nếu khởi tại ngẫu nhiên, không dễ dàng định nghĩa giá trị bước đi rõ ràng, không đảm bảo được lời giải tối ưu.
 
 Q-Learning giải được 8-puzzle vì nó học cách di chuyển từ bất kỳ trạng thái nào về trạng thái đích bằng cách tối ưu hóa giá trị hành động qua trải nghiệm.
+
+
+### Kết luận
+
+
+Một số thuật toán như Breadth-First Search (BFS), Uniform Cost Search (UCS), A* và Iterative Deepening A* đảm bảo tìm được lời giải ngắn nhất nếu tồn tại và chi phí các bước là dương.
+
+Trong khi đó, các thuật toán như Depth-First Search (DFS), Greedy Search, Hill Climbing, hay Beam Search có thể cho lời giải nhanh nhưng không đảm bảo tối ưu, hoặc thậm chí không tìm ra lời giải nếu bị kẹt trong cực trị cục bộ hoặc vòng lặp.
+
+Greedy Search và Beam Search có tốc độ tốt, nhưng phụ thuộc mạnh vào chất lượng hàm heuristic.
+
+Hill Climbing, Simulated Annealing và Genetic Algorithm có thể nhanh với các cấu hình đơn giản, tuy nhiên kết quả không ổn định và dễ dao động.
+
+UCS và A* tuy tối ưu nhưng tiêu tốn nhiều bộ nhớ, nhất là trong các bài toán có không gian trạng thái lớn.
+
+Các thuật toán quay lui (Backtracking) và forward checking tuy đơn giản, nhưng dễ mở rộng khi tích hợp thêm ràng buộc.
+
+Những thuật toán như Belief State Search, SBO, và And-Or Search cho thấy khả năng hoạt động trong môi trường phức tạp — nơi có ẩn thông tin hoặc kết quả không xác định.
+
+Reinforcement Learning (Q-learning, SARSA) tuy khó triển khai và cần thời gian huấn luyện, nhưng mang lại tiềm năng cao khi áp dụng cho môi trường động và phi tuyến tính.
+
+Việc thử nghiệm đa dạng thuật toán trên cùng một bài toán cụ thể giúp hiểu rõ bản chất của từng kỹ thuật: từ tìm kiếm có cấu trúc đến tối ưu hóa cục bộ, và cả học thông qua tương tác.
+
+Mỗi thuật toán mang lại góc nhìn khác nhau về cách tiếp cận bài toán — từ tìm lời giải tường minh, đến học từ phản hồi, hoặc xử lý trong môi trường không hoàn hảo.
