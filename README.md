@@ -4,7 +4,7 @@
 
 **Lê An Bình _ 23133007**
 
-**Lớp Trí tuệ nhân tạo_ Nhóm 05 (nhúng chuyển lớp...)**
+**Lớp Tri tue nhan tao_ Nhom 05 (nhưng chuyển lớp và nộp bài trên Lớp Tri tue nhan tao_ Nhom 04))**
 
 ---
 
