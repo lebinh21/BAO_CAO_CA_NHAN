@@ -37,6 +37,20 @@ Backtracking with Forward Checking là một kỹ thuật tìm kiếm kết hợ
 
 ![Demo](gif/back_with_forward.gif)
 
+
+#### So sánh hiệu suất và nhận xét Các thuật toán CSPs
+
+![Demo](gif/so_sanh_csps.gif)
+
+
+Dựa trên biểu đồ so sánh giữa hai thuật toán giải bài toán ràng buộc (CSPs) là Backtracking và Backtracking Forward, có thể rút ra nhiều nhận định quan trọng về hiệu quả thực thi và khả năng tối ưu hóa của từng thuật toán trong việc giải quyết các bài toán có ràng buộc.
+
+Trước hết, xét về thời gian thực thi, thuật toán Backtracking mất khoảng 100.96 giây, trong khi Backtracking Forward chỉ mất 48.06 giây để hoàn thành cùng một tác vụ. Điều này cho thấy rằng Backtracking Forward giúp rút ngắn thời gian gần một nửa so với Backtracking truyền thống. Sự cải thiện này đến từ việc Backtracking Forward sử dụng kỹ thuật forward checking, giúp loại trừ sớm các giá trị không hợp lệ và giảm số lần quay lui không cần thiết.
+
+Tiếp theo, khi xem xét đến số bước đi cần thiết để giải quyết bài toán, Backtracking yêu cầu 99 bước, còn Backtracking Forward chỉ cần 47 bước. Điều này chứng tỏ rằng không chỉ nhanh hơn, Backtracking Forward còn hiệu quả hơn về mặt logic và chiến lược tìm kiếm, nhờ vào khả năng tiên đoán và loại trừ giá trị không hợp lệ trước khi thực hiện gán biến.
+
+Tổng hợp cả hai yếu tố — thời gian thực thi và số bước đi — cho thấy rằng Backtracking Forward là phương pháp ưu việt hơn hẳn trong việc giải bài toán CSPs. Nó không chỉ giúp tiết kiệm tài nguyên tính toán mà còn tăng tính chính xác và ổn định trong quá trình tìm lời giải. Đây là một lựa chọn phù hợp cho các bài toán CSP có không gian tìm kiếm lớn hoặc có nhiều ràng buộc chặt chẽ.
+
 ### 2.2	Các thuật toán Complex Environment
 
 
@@ -63,6 +77,13 @@ Belief State Search là phương pháp tìm kiếm trong không gian trạng th�
 Là loại tìm kiếm trong môi trường mà agent không thể quan sát đầy đủ toàn bộ trạng thái hiện tại của môi trường. Thay vì biết chính xác trạng thái hiện tại, agent chỉ nhận được thông tin quan sát một phần hoặc không chắc chắn về trạng thái. Do đó, agent phải dựa vào các quan sát trước đó, các hành động đã thực hiện, và mô hình môi trường để suy đoán trạng thái hiện tại (gọi là belief state hay trạng thái tin tưởng).
 
 ![Demo](gif/Search-Par.gif)
+
+#### So sánh hiệu suất và nhận xét Các thuật toán Complex Environment
+
+![Demo](gif/so_sanh_complex.gif)
+
+Trong môi trường phức tạp, nếu bạn cần lựa chọn thuật toán có hiệu suất tốt thì SBO là lựa chọn ưu tiên. Belief state cũng là lựa chọn khá ổn, trong khi And_or cần được cải tiến thêm để phù hợp hơn với các tình huống phức tạp.
+
 
 ### 2.3	Các thuật toán Local Search
 
@@ -112,6 +133,13 @@ Simulated Annealing là thuật toán tối ưu ngẫu nhiên dựa trên quá t
 
 ![Demo](gif/SA.gif)
 
+#### So sánh hiệu suất và nhận xét về Các thuật toán Local Search
+
+![Demo](gif/so_sanh_local_search.gif)
+
+Vì thuật toán GA không đảm bảo được lời giải hoặc tìm lời giải trong thời gian hữu hạn, không khai thác cấu trúc không gian trạng thái: 8 puzzle có không gian tìm kiếm có cấu trúc rõ ràng còn GA thì duyệt ngẫu nhiên và tùy trạng thái ban đầu mới giải được nên nếu đổi lại trạng thái ban đầu thì GA vẫn sẽ ra kết quả nhưng trong bài này thì không. Steepest Ascent Hill Climbing, SHC kẹt tại cực trị lân cận: nếu không có lân cận nào tốt hơn thì thuật toán dừng dù chưa tìm ra lời giải, không quay lui: nếu lúc đầu chọn đường đi sai thì không quay lại được và trong bài toán 2 thuật toán trên không tìm ra lời giải. Stochastic Hill Climbing thì không đảm bảo lời giải, không nhớ lịch sử nên dễ quay lại vòng trạng thái cũ và ở bài toán này thuật toán cũng không có lời giải. SA thì không bảo đảm tìm ra lời giải tối ưu, nhạy cảm với tham số nên dễ bị thất bại và ở trong bài toán này nó cũng không giải được. Beam giải tốt vì ở đây em đã chọn được hàm heuristic phù hợp, giá trị beam width (k) đủ lớn để giữ lại các khả năng hợp lý, trạng thái đầu không quá xa trạng thái đích.
+
+
 ### 2.4	Các thuật toán Informed Search
 
 
@@ -138,6 +166,16 @@ A* là thuật toán tìm kiếm đường đi hiệu quả và tối ưu, kết
 Greedy Search (tìm kiếm tham lam) là thuật toán tìm kiếm trong không gian trạng thái, tại mỗi bước nó chọn mở rộng nút mà theo đánh giá hiện tại có vẻ “tốt nhất” hoặc gần với mục tiêu nhất dựa trên hàm đánh giá heuristic.
 
 ![Demo](gif/greedy.gif)
+
+#### So sánh hiệu suất và nhận xét về Các thuật toán Informed Search
+
+![Demo](gif/so_sanh_informed.gif)
+
+Hiệu quả nhất: IDA* và A* là hai thuật toán ưu việt nhất trong nhóm Informed Search. Cả hai đều có thời gian xử lý nhanh, số bước đi ít, chứng minh khả năng dẫn đường thông minh và tối ưu.
+
+Kém hiệu quả nhất: Greaddy tỏ ra không phù hợp trong môi trường này. Cả thời gian lẫn số bước đi đều vượt xa hai thuật toán còn lại, cho thấy nó có xu hướng theo đuổi mục tiêu trước mắt mà bỏ qua chiến lược tổng thể.
+
+Do đó, nếu phải lựa chọn một thuật toán Informed Search để giải quyết các bài toán trong môi trường phức tạp, IDA* hoặc A* nên là lựa chọn ưu tiên hàng đầu. Greaddy chỉ nên dùng khi yêu cầu tốc độ thô, không cần tối ưu về bước đi hoặc trong các bài toán đơn giản hơn.
 
 ### 2.5	Các thuật toán Uniformed Search
 
@@ -174,6 +212,19 @@ Nó thực hiện DFS nhưng giới hạn độ sâu, sau đó lặp lại với
 
 ![Demo](gif/IDS.gif)
 
+#### So sánh hiệu suất và nhận xét về Các thuật toán Uniformed Search
+
+![Demo](gif/so_sanh_uniformed.gif)
+
+Thuật toán DFS không hiệu quả với trò chơi vì không tìm được lời giải ngắn nhất, dễ đi vào nhánh sai hoặc vòng lặp, không có định hướng tìm kiếm. 
+
+Hiệu quả nhất: BFS và UCS có hiệu suất tốt nhất, thời gian xử lý ngắn và số bước đi thấp. Nếu chi phí đồng đều, BFS là lựa chọn hợp lý.
+
+Hiệu suất thấp nhất: IDS mất nhiều thời gian hơn và tạo ra nhiều bước đi hơn. Nó phù hợp khi không biết trước độ sâu lời giải, nhưng không tối ưu trong các bài toán có chi phí đồng đều và lời giải nông.
+
+Vì vậy, trong các bài toán Uniformed Search đơn giản hoặc có chi phí đồng đều, BFS hoặc UCS nên được ưu tiên. IDS chỉ thích hợp trong môi trường không chắc chắn về độ sâu hoặc khi bộ nhớ là yếu tố hạn chế chính.
+
+
 ### 2.6	Các thuật toán Reinforcement Learning
 
 
@@ -191,3 +242,10 @@ SARSA là một thuật toán học tăng cường (Reinforcement Learning) theo
 
 ![Demo](gif/sarsa.gif)
 
+#### So sánh hiệu suất và nhận xét về Các thuật toán Reinforcement Learning
+
+![Demo](gif/so_sanh_learning.gif)
+
+Thuật toán SARSA không tối ưu cho bài toán này là vì không gian trạng thái lớn, tập huấn luyện không hiệu quả nếu khởi tại ngẫu nhiên, không dễ dàng định nghĩa giá trị bước đi rõ ràng, không đảm bảo được lời giải tối ưu.
+
+Q-Learning giải được 8-puzzle vì nó học cách di chuyển từ bất kỳ trạng thái nào về trạng thái đích bằng cách tối ưu hóa giá trị hành động qua trải nghiệm.
