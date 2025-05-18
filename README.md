@@ -8,11 +8,6 @@
 
 ---
 
-## 1. Mục tiêu
-
-Mục tiêu của project là triển khai...
-
-
 ## 1.	Mục tiêu
 
 
@@ -27,7 +22,7 @@ Mục tiêu của project là triển khai, trực quan hóa và so sánh hiệu
 
 CSP (Constraint Satisfaction Problem) – hay Bài toán thỏa mãn ràng buộc – là một loại bài toán trong trí tuệ nhân tạo, nơi nhiệm vụ là tìm giá trị cho tập biến sao cho thỏa mãn tất cả các ràng buộc (constraints) đã cho.
 
-
+![Demo](gif/backtracking.gif)
 #### 2.1.1 Backtracking (bsa.py)
 
 
