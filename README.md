@@ -202,7 +202,7 @@ Depth-First Search (DFS) là thuật toán duyệt hoặc tìm kiếm trong đ�
 
 Uniform Cost Search là một thuật toán tìm kiếm đường đi ngắn nhất trong đồ thị có trọng số (các cạnh có chi phí khác nhau), dựa trên nguyên tắc luôn mở rộng nút có chi phí tích lũy nhỏ nhất từ điểm xuất phát đến nút đó.
 
-![Demo](gif/ucs.gif)
+![Demo](gif/UCS.gif)
 
 #### 2.5.4 Iterative Deepening Search (IDS.py)
 
