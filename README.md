@@ -48,14 +48,14 @@ Trong trí tuệ nhân tạo, môi trường phức tạp (complex environment) 
 
 And-Or Search là thuật toán tìm kiếm mở rộng cho các bài toán có thể xảy ra các trường hợp phân nhánh phức tạp, bao gồm các tình huống có điều kiện phụ thuộc hoặc các bài toán mang tính quyết định và ngẫu nhiên, như trong lập kế hoạch dưới sự không chắc chắn hoặc trong các trò chơi.
 
-![Demo](gif/and or.gif)
+![Demo](gif/and_or.gif)
 
 #### 2.2.2 Belief State Search (Belief_State_Search.py)
 
 
 Belief State Search là phương pháp tìm kiếm trong không gian trạng thái mà agent không biết chính xác trạng thái hiện tại mà chỉ biết một tập hợp các trạng thái khả dĩ (gọi là belief state). Tức là, thay vì làm việc trên trạng thái thực tế, agent duy trì và cập nhật một phân phối xác suất (hoặc tập hợp các trạng thái có thể) đại diện cho sự không chắc chắn về trạng thái.
 
-![Demo](gif/belief state.gif)
+![Demo](gif/belief_state.gif)
 
 #### 2.2.3 Searching With Partically Observation (sbo.py)
 
@@ -89,7 +89,7 @@ Simple Hill Climbing là thuật toán tìm kiếm và tối ưu đơn giản, t
 
 Steepest Ascent Hill Climbing là một biến thể của thuật toán Hill Climbing trong đó, tại mỗi bước, thuật toán xem xét tất cả các trạng thái láng giềng và chọn trạng thái có giá trị cải thiện tốt nhất (tăng hoặc giảm lớn nhất tùy bài toán) để chuyển sang.
 
-![Demo](gif/steepest accent.gif)
+![Demo](gif/steepest_accent.gif)
 
 #### 2.3.4 Stochastic Hill Climbing (stochastic_hill_climbing.py)
 
@@ -150,7 +150,7 @@ Uninformed Search (Tìm kiếm không có thông tin) là các thuật toán kh�
 
 Breadth-First Search (BFS) là thuật toán duyệt hoặc tìm kiếm trong đồ thị hoặc cây theo từng lớp (mức) một, nghĩa là thăm tất cả các nút kề trực tiếp của nút hiện tại trước, rồi mới đi sâu sang các nút ở cấp độ kế tiếp.
 
-![Demo](gif/bfc.gif)
+![Demo](gif/bfs.gif)
 
 #### 2.5.2 Depth-First Search (DFS.py)
 
